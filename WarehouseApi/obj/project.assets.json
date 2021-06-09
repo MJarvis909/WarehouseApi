@@ -176,19 +176,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maxek\\.nuget\\packages\\": {}
+    "C:\\Users\\Maks\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maxek\\source\\repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
+      "projectUniqueName": "C:\\Users\\Maks\\Source\\Repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
       "projectName": "WarehouseApi",
-      "projectPath": "C:\\Users\\maxek\\source\\repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
-      "packagesPath": "C:\\Users\\maxek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maxek\\source\\repos\\WarehouseApi\\WarehouseApi\\obj\\",
+      "projectPath": "C:\\Users\\Maks\\Source\\Repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
+      "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Maks\\Source\\Repos\\WarehouseApi\\WarehouseApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\maxek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

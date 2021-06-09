@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IgDj4h5zBG8cZ/3DQmVTnV9e9yTuoqrap4cRZnpKo7qFdD6jMo0TWtqy8bUR8Z2YVW3X5ziYF67sC1QB80BX+Q==",
+  "dgSpecHash": "nJdU+TtW6rhrpGQaEqBMnZf1qiDCrEB5v3qOOXPfxo63ReFoKXyVlvlfzn658SII/ioH5JZIB0ZbvfZO/jrtiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxek\\source\\repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
+  "projectFilePath": "C:\\Users\\Maks\\Source\\Repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\maxek\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
-    "C:\\Users\\maxek\\.nuget\\packages\\npgsql\\5.0.5\\npgsql.5.0.5.nupkg.sha512",
-    "C:\\Users\\maxek\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
-    "C:\\Users\\maxek\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "C:\\Users\\Maks\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\Maks\\.nuget\\packages\\npgsql\\5.0.5\\npgsql.5.0.5.nupkg.sha512",
+    "C:\\Users\\Maks\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+    "C:\\Users\\Maks\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }
