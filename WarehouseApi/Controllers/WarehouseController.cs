@@ -90,6 +90,39 @@ namespace WarehouseApi.Controllers
             return Ok(result);
         }
 
+        [HttpGet("tool/bytype")]
+        public IActionResult GetToolsByType(int type)
+        {
+            var connection = new WarehouseDbContext().Connection;
+            var result = connection.Query<Tool>(@"SELECT id AS Id,
+                                                  name AS Name,
+                                                  type_id AS TypeId,
+                                                  price AS Price,
+                                                  producer_id AS ProducerId,
+                                                  maintenance_date AS MaintenanceDate,
+                                                  size AS Size
+                                                  FROM tools.tool
+                                                  WHERE  type_id = @type", new {type});
+
+            return Ok(result);
+        }
+        [HttpGet("tool/byproducer")]
+        public IActionResult GetToolsByProducer(int producer)
+        {
+            var connection = new WarehouseDbContext().Connection;
+            var result = connection.Query<Tool>(@"SELECT id AS Id,
+                                                  name AS Name,
+                                                  type_id AS TypeId,
+                                                  price AS Price,
+                                                  producer_id AS ProducerId,
+                                                  maintenance_date AS MaintenanceDate,
+                                                  size AS Size
+                                                  FROM tools.tool
+                                                  WHERE  producer_id = @producer", new { producer });
+
+            return Ok(result);
+        }
+
         [HttpGet("tool/borrowed/{borrowed}")]
 
         public IActionResult GetTools(bool borrowed)
@@ -113,7 +146,6 @@ namespace WarehouseApi.Controllers
         }
 
         [HttpGet("producer")]
-
         public IActionResult GetProducers()
         {
             var connection = new WarehouseDbContext().Connection;
