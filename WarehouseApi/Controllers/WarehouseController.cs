@@ -77,32 +77,70 @@ namespace WarehouseApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("tool/name/{name}")]
 
-        public IActionResult GetTools(string name)
+        [HttpGet("tools")]
+        public IActionResult GetTools(string name, string type, string producer)
         {
-            var connection = new WarehouseDbContext().Connection;
+            var dbContext = new WarehouseDbContext();
+            IEnumerable<Tool> result = default;
 
-            var result = connection.Query<string>(@"SELECT remaining
-                                                    FROM tools.stock
-                                                    JOIN tools.tool ON stock.tool_id = tool.id
-                                                    WHERE LOWER(name) = LOWER(@name)", new { name });
-            return Ok(result);
-        }
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                result = dbContext.Connection.Query<Tool>(@"SELECT
+                                                            tool.name AS Name,
+                                                            tool_type.type AS Type,
+                                                            tool.price AS Price,
+                                                            producers.name AS Producer,
+                                                            tool.maintenance_date AS MaintenanceDate,
+                                                            tool.size AS Size
+                                                            FROM tools.tool
+                                                            JOIN tools.producers ON tool.producer_id = producers.id
+                                                            JOIN tools.tool_type ON tool.type_id = tool_type.id
+                                                            WHERE  LOWER(tool.name) LIKE LOWER(@name)", new { name });
 
-        [HttpGet("tool/bytype")]
-        public IActionResult GetToolsByType(int type)
-        {
-            var connection = new WarehouseDbContext().Connection;
-            var result = connection.Query<Tool>(@"SELECT id AS Id,
-                                                  name AS Name,
-                                                  type_id AS TypeId,
-                                                  price AS Price,
-                                                  producer_id AS ProducerId,
-                                                  maintenance_date AS MaintenanceDate,
-                                                  size AS Size
-                                                  FROM tools.tool
-                                                  WHERE  type_id = @type", new {type});
+            }
+            else if (!string.IsNullOrWhiteSpace(type))
+            {
+                result = dbContext.Connection.Query<Tool>(@"SELECT 
+                                                            tool.name AS Name,
+                                                            tool_type.type AS Type,
+                                                            tool.price AS Price,
+                                                            producers.name AS Producer,
+                                                            tool.maintenance_date AS MaintenanceDate,
+                                                            tool.size AS Size
+                                                            FROM tools.tool
+                                                            JOIN tools.producers ON tool.producer_id = producers.id
+                                                            JOIN tools.tool_type ON tool.type_id = tool_type.id
+                                                            WHERE  LOWER(tool_type.type) LIKE LOWER(@type)", new { type });
+            }
+            else if (!string.IsNullOrWhiteSpace(producer))
+            {
+                result = dbContext.Connection.Query<Tool>(@"SELECT 
+                                                            tool.name AS Name,
+                                                            tool_type.type AS Type,
+                                                            tool.price AS Price,
+                                                            producers.name AS Producer,
+                                                            tool.maintenance_date AS MaintenanceDate,
+                                                            tool.size AS Size
+                                                            FROM tools.tool
+                                                            JOIN tools.producers ON tool.producer_id = producers.id
+                                                            JOIN tools.tool_type ON tool.type_id = tool_type.id
+                                                            WHERE  LOWER(producers.name) LIKE LOWER(@producer)", new { producer });
+            }
+            else
+            {
+                result = dbContext.Connection.Query<Tool>(@"SELECT 
+                                                            tool.name AS Name,
+                                                            tool_type.type AS Type,
+                                                            tool.price AS Price,
+                                                            producers.name AS Producer,
+                                                            tool.maintenance_date AS MaintenanceDate,
+                                                            tool.size AS Size
+                                                            FROM tools.tool
+                                                            JOIN tools.producers ON tool.producer_id = producers.id
+                                                            JOIN tools.tool_type ON tool.type_id = tool_type.id");
+            }
+
 
             return Ok(result);
         }
