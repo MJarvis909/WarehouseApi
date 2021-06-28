@@ -49,3 +49,8 @@ C:\Users\maxek\source\repos\WarehouseApi\WarehouseApi\bin\Debug\netcoreapp3.1\Sw
 C:\Users\maxek\source\repos\WarehouseApi\WarehouseApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\maxek\source\repos\WarehouseApi\WarehouseApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\maxek\source\repos\WarehouseApi\WarehouseApi\obj\Debug\netcoreapp3.1\WarehouseApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Maks\Source\Repos\WarehouseApi\WarehouseApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Maks\Source\Repos\WarehouseApi\WarehouseApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Maks\Source\Repos\WarehouseApi\WarehouseApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Maks\Source\Repos\WarehouseApi\WarehouseApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Maks\Source\Repos\WarehouseApi\WarehouseApi\obj\Debug\netcoreapp3.1\WarehouseApi.MvcApplicationPartsAssemblyInfo.cs
