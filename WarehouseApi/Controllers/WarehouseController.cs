@@ -193,5 +193,58 @@ namespace WarehouseApi.Controllers
 
         }
 
+<<<<<<< HEAD
+=======
+        [HttpPost("tool")]
+        public IActionResult CreateTool([FromBody]Tool tool)
+        {
+            var dbContext = new WarehouseDbContext();
+
+            var typeId = dbContext.Connection.QueryFirst<int>(@"
+                SELECT id FROM tools.tool_type WHERE LOWER(type) LIKE LOWER(@type)",
+                new { tool.Type });
+
+            var producerId = dbContext.Connection.QueryFirst<int>(@"
+                SELECT id FROM tools.producers WHERE LOWER(name) LIKE LOWER(@producer)", 
+                new { tool.Producer});
+
+            dbContext.Connection.Execute(@"INSERT INTO tools.tool(name, type_id, price, producer_id, maintenance_date, size)
+            VALUES(@Name,@TypeId, @Price, @ProducerId, @MaintenanceDate, @Size)",
+                new
+                {
+                    tool.Name,
+                    tool.Price,
+                    tool.MaintenanceDate,
+                    tool.Size,
+                    typeId,
+                    producerId
+                }
+            );
+
+            return Created("", "tool created successfully");
+        }
+
+        [HttpPut("producer")]
+        public IActionResult UpdateProducer([FromBody]Producer producer)
+        {
+            var dbContext = new WarehouseDbContext();
+
+            dbContext.Connection.Execute(@"UPDATE tools.producers SET name = @name WHERE id = @id", new { producer.Name, producer.Id });
+
+            return Ok("Producer succesfully updated");
+        }
+
+        [HttpDelete("employee/firstName/{firstName}/lastName/{lastName}")]
+        public IActionResult DeleteEmployee(string firstName, string lastName)
+        {
+            var dbContext = new WarehouseDbContext();
+            dbContext.Connection.Execute(@"DELETE FROM tools.employees
+            WHERE LOWER(first_name) LIKE LOWER(@firstName)
+            AND LOWER(last_name) LIKE LOWER(@lastName)",
+            new { firstName, lastName });
+
+            return Ok("Employee deleted successfully");
+        }
+>>>>>>> 09ce87033c3fe2a156e307407512a3b5c49a0337
     }
 }
