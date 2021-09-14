@@ -193,8 +193,6 @@ namespace WarehouseApi.Controllers
 
         }
 
-<<<<<<< HEAD
-=======
         [HttpPost("tool")]
         public IActionResult CreateTool([FromBody]Tool tool)
         {
@@ -245,6 +243,5 @@ namespace WarehouseApi.Controllers
 
             return Ok("Employee deleted successfully");
         }
->>>>>>> 09ce87033c3fe2a156e307407512a3b5c49a0337
     }
 }

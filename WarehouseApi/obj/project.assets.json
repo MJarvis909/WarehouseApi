@@ -367,17 +367,12 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Maks\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\maxek\\.nuget\\packages\\": {}
->>>>>>> 09ce87033c3fe2a156e307407512a3b5c49a0337
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Maks\\Source\\Repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
       "projectName": "WarehouseApi",
       "projectPath": "C:\\Users\\Maks\\Source\\Repos\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
@@ -390,16 +385,6 @@
       "configFilePaths": [
         "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-      "projectUniqueName": "C:\\Users\\maxek\\source\\repos\\WarehouseApi\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
-      "projectName": "WarehouseApi",
-      "projectPath": "C:\\Users\\maxek\\source\\repos\\WarehouseApi\\WarehouseApi\\WarehouseApi\\WarehouseApi.csproj",
-      "packagesPath": "C:\\Users\\maxek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maxek\\source\\repos\\WarehouseApi\\WarehouseApi\\WarehouseApi\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\maxek\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 09ce87033c3fe2a156e307407512a3b5c49a0337
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -468,12 +453,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
->>>>>>> 09ce87033c3fe2a156e307407512a3b5c49a0337
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Maks\\Source\\Repos\\WarehouseApi\\WarehouseApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
